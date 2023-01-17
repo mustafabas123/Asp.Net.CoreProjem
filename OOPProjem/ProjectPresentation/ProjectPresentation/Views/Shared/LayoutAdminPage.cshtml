@@ -1,0 +1,33 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+@await Html.PartialAsync("~/Views/Partials/PartialsHead.cshtml")
+
+<body>
+  <div class="container-scroller">
+    <!-- partial:../../partials/_navbar.html -->
+    @await Html.PartialAsync("~/Views/Partials/PartialsNavbar.cshtml")
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+        @await Html.PartialAsync("~/Views/Partials/PartialsSidebar.cshtml")
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+              @RenderBody()
+          </div>
+        </div>
+        @await Html.PartialAsync("~/Views/Partials/PartialsFooter.cshtml")
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+     @await Html.PartialAsync("~/Views/Partials/PartialsScript.cshtml")
+</body>
+
+</html>

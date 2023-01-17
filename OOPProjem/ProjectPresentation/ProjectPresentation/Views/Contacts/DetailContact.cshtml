@@ -1,0 +1,32 @@
+﻿@model EntityLayer.Concrete.Contact
+@{
+    ViewData["Title"] = "DetailContact";
+    Layout = "~/Views/Shared/LayoutAdminPage.cshtml";
+}
+
+            <div class="col-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">İletişim Sayfası Detay</h4>
+                  <form class="forms-sample">
+                    <div class="form-group">
+                      <label for="exampleInputName1">Adı Soyadı</label>
+                      <input type="text" class="form-control" id="exampleInputName1" placeholder="Ad Soyad" asp-for="Name">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail3">Email address</label>
+                      <input type="text" class="form-control" id="exampleInputEmail3" placeholder="Email" asp-for="Mail">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail3">Tarih</label>
+                      <input type="date" class="form-control" id="exampleInputEmail3" placeholder="Tarih" asp-for="Date">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleTextarea1">Yorum</label>
+                      <textarea class="form-control" id="exampleTextarea1" rows="4" asp-for="Comment"></textarea>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
